@@ -9,12 +9,13 @@ import com.luv2code.springcoredemo.common.Coach;
 @RestController
 public class DemoController {
 	
+	@Autowired
 	private Coach myCoach;
 	
-	@Autowired
-	public void setCoach(Coach theCoach) {
-		myCoach = theCoach;
-	}
+//	@Autowired
+//	public void setCoach(Coach theCoach) {
+//		myCoach = theCoach;
+//	}
 	
 	@GetMapping("/getdailyworkout")
 	public String getDailyWorkOut() {
