@@ -9,29 +9,18 @@ import com.luv2code.springcoredemo.common.Coach;
 
 @RestController
 public class DemoController {
-	
-	
+
 	private Coach myCoach;
-	
-	
+
 	@Autowired
 	public void setCoach(@Qualifier("cricketCoach") Coach theCoach) {
-		myCoach = theCoach;
+		this.myCoach = theCoach;
+
 	}
-	
+
 	@GetMapping("/getdailyworkout")
 	public String getDailyWorkOut() {
 		return myCoach.getDailyWorkOut();
 	}
-	
+
 }
-
-
-
-
-
-
-
-
-
-
